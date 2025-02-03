@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", serif;
+}
+
+body {
+	background-color: #1A2A33;
+}
+
+.divOpacity {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    opacity: 50%;
+    background-color: #000;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+header div {
+    display: flex;
+}
+
+.divCroixRond {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.divTurn {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    box-shadow: 0px -4px 0px 0px rgba(16, 33, 42, 1) inset;
+    padding: 9px 15px 13px 15px;
+    border-radius: 5px;
+}
+
+.turn {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    color: silver;
+    letter-spacing: 0.88px;
+}
+
+.reload {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px -4px 0px 0px rgba(107, 137, 151, 1) inset;
+    width: 15%;
+    padding: 12px;
+    cursor: pointer;
+	background-color: Silver;
+}
+
+.firstSec {
+	display: grid;
+	grid-template-columns: repeat(3, 92px);
+	grid-template-rows: repeat(3, 92px);
+    justify-content: center;
+	gap: 31px;
+    padding: 1rem;
+}
+
+.pion {
+	border: none;
+    border-radius: 10px;
+    box-shadow: 0px -8px 0px 0px rgba(16, 33, 42, 1) inset;
+	width: 100%;
+	height: 100%;
+    cursor: pointer;
+	background-color: #1F3641;
+}
+
+#imgBtn {
+    width: 40px;
+}
+
+.secondSec {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    width: 100%;
+    text-align: center;
+    gap: 31px;
+
+}
+
+.playerDiv{
+    text-align: center;
+    color: black;
+    width: 100%;
+    padding: 12px 0;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    color: #1A2A33;
+    border-radius: 10px;
+}
+
+span {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    color: #1A2A33;
+}
+
+.blue {
+    background-color: #31C3BD;
+}
+
+.gray {
+    background-color: #A8BFC9;
+}
+
+.orange {
+    background-color: #F2B137;
+}
+
+.threeSec {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    background-color: #1F3641;
+    width: 100%;
+    z-index: 2;
+}
+
+.threeSec p {
+    color: #A8BFC9;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    text-align: center;
+    margin: 2.5rem 0 1rem 0;
+}
+
+.divH2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    
+}
+
+.threeSec h2 {
+    color: #F2B137;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.divBtn {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1.5rem 0 3rem 0;
+}
+
+.quit {
+    padding: 15px 16px 17px 16px;
+    background-color: #A8BFC9;
+    box-shadow: 0px -4px 0px 0px rgba(107, 137, 151, 1) inset;
+    border: none;
+    border-radius: 10px;
+}
+
+.next {
+    padding: 15px 16px 17px 16px;
+    background-color: #F2B137;
+    box-shadow: 0px -4px 0px 0px rgba(204, 139, 19, 1) inset;
+    border: none;
+    border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header {
+        width: 67%;
+        margin: 0;
+    }
+
+    .reload {
+        width: 10%;
+    }
+
+    .firstSec {
+        grid-template-columns: repeat(3, 140px);
+        grid-template-rows: repeat(3, 140px);
+    }
+    
+    .secondSec {
+        margin: auto;
+    }
+
+    #imgBtn {
+        width: 64px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    header {
+        width: 37%;
+    }
+
+    .reload {
+        width: 10%;
+    }
+    
+    .secondSec {
+        margin: auto;
+    }
+
+}
