@@ -1,8 +1,32 @@
 const pion = document.querySelectorAll(".pion");
-
+const opacity = document.querySelector(".divOpacity");
+const playerXWin = document.querySelector(".SecFirstPlayerWin");
+const playerOWin = document.querySelector(".SecLastPlayerWin");
 let counter = 0;
 let ALT_CROSS = "cross";
 let ALT_CIRCLE = "circle";
+
+const winCombo = [
+        [0, 1, 2], [3, 4, 5], [6, 7, 8],
+        [0, 3, 6], [1, 4, 7], [2, 5, 8],
+        [0, 4, 8], [2, 4, 6]
+];
+
+function verif(player) {
+    for (let i = 0; i < winCombo.length; i++) {
+        let combo = winCombo[i];
+
+        let a = combo[0]
+        let b = combo[1]
+        let c = combo[2]
+
+        if (arrayPion[a] === player && arrayPion[b] === player && arrayPion[c] === player) {
+            return true
+        }
+        
+    }
+    return false
+}
 
 let arrayPion = ["", "", "", "", "", "", "", "", ""];
 
@@ -34,6 +58,16 @@ for (let i = 0; i < pion.length; i++) {
 
         arrayPion[i] = img.alt;
         console.log(arrayPion);
+
+        if (verif(img.alt)) {
+            opacity.style.display = "flex";
+            if (img.alt === "cross") {
+                playerXWin.style.display = "flex";
+            }else {
+                playerOWin.style.display = "flex";
+            }
+        }
+
 
         counter++
     }); 
