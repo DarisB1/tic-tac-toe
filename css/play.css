@@ -20,6 +20,7 @@ body {
     z-index: 1;
     opacity: 50%;
     background-color: #000;
+    display: none;
 }
 
 header {
@@ -132,16 +133,39 @@ span {
     background-color: #F2B137;
 }
 
-.threeSec {
+.SecFirstPlayerWin {
     position: absolute;
     top: 35%;
     left: 0;
     background-color: #1F3641;
     width: 100%;
     z-index: 2;
+    display: none;
 }
 
-.threeSec p {
+.SecLastPlayerWin {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    background-color: #1F3641;
+    width: 100%;
+    z-index: 2;
+    display: none;
+}
+
+.SecRestart {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    background-color: #1F3641;
+    width: 100%;
+    z-index: 2;
+    padding-top: 4rem;
+    text-align: center;
+    display: none;
+}
+
+.pWin {
     color: #A8BFC9;
     font-size: 14px;
     font-weight: 700;
@@ -155,11 +179,24 @@ span {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    
 }
 
-.threeSec h2 {
+.rondH2 {
     color: #F2B137;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.croixH2 {
+    color: #31C3BD;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+}
+
+.restartH2 {
+    color: #A8BFC9;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
@@ -178,6 +215,10 @@ span {
     box-shadow: 0px -4px 0px 0px rgba(107, 137, 151, 1) inset;
     border: none;
     border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1A2A33;
 }
 
 .next {
@@ -186,6 +227,10 @@ span {
     box-shadow: 0px -4px 0px 0px rgba(204, 139, 19, 1) inset;
     border: none;
     border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1A2A33;
 }
 
 @media screen and (min-width: 768px) {
@@ -213,6 +258,32 @@ span {
 
     #imgBtn {
         width: 64px;
+    }
+
+    .pWin {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 20px;
+    }
+
+    .rondH2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+    
+    .croixH2 {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+    }
+
+    .restartH2 {
+        margin-bottom: 1.5rem;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 50px;
+        letter-spacing: 2.5px;
     }
 }
 
