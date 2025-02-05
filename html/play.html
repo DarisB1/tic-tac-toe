@@ -9,7 +9,7 @@
 	<body>
 		<div class="divOpacity"></div>
 		<header>
-			<div class="divCroixRond">
+			<div class="divCroixRondHeader">
 				<img src="../assets/croix.svg" alt="croix" />
 				<img src="../assets/rond.svg" alt="rond" />
 			</div>
@@ -18,11 +18,32 @@
 				<p class="turn">TURN</p>
 			</div>
 			<button class="reload">
-				<img src="../assets/reload.svg" alt="reload" />
+				<img id="imgReload" src="../assets/reload.svg" alt="reload" />
 			</button>
 		</header>
 		<main>
-			<section class="firstSec">
+			<!-- index.html -->
+			 <article class="firstArt">
+				<div class="divCroixRond">
+					<img src="../assets/croix.svg" alt="croix">
+					<img src="../assets/rond.svg" alt="rond">
+				</div>
+				<section class="firstSec">
+					<h1>PICK PLAYER 1'S MARK</h1>
+					<div>
+						<button class="choixX"><img class="imgChoixX" src="../assets/croix.svg" alt="croix"></button>
+						<button class="choixO choix"><img class="imgChoixO" src="../assets/rondFoncé.svg" alt="rond"></button>
+					</div>
+					<p>REMEMBER : X GOES FIRST</p>
+				</section>
+				<section class="lastSec">
+					<button class="cpu">NEW GAME (VS CPU)</button>
+					<button class="player">NEW GAME  (VS PLAYER)</button>
+				</section>				
+			 </article>
+				<!-- play.html -->
+				 <article class="lastArt">
+			<section class="secBlockGame">
 				<button class="pion">
 					<img id="imgBtn" src="" alt="" />
 				</button>
@@ -51,33 +72,31 @@
 					<img id="imgBtn" src="" alt="" />
 				</button>
 			</section>
-			<section class="secondSec">
+			<section class="secCounterWin">
 				<div class="playerDiv blue">
 					<p>X (P2)</p>
-					<span>0</span>
+					<span class="spanX">0</span>
 				</div>
 				<div class="playerDiv gray">
 					<p>TIES</p>
-					<span>0</span>
+					<span class="spanTies">0</span>
 				</div>
 				<div class="playerDiv orange">
 					<p>O (P1)</p>
-					<span>0</span>
+					<span class="spanO">0</span>
 				</div>
 			</section>
-			
 			<section class="SecFirstPlayerWin">
-				<p>PLAYER 1 WINS!</p>
+				<p class="pWin">PLAYER 1 WINS!</p>
 				<div class="divH2">
 					<img src="../assets/rond.svg" alt="rond" />
-					<h2>TAKES THE ROUND</h2>
+					<h2 class="rondH2">TAKES THE ROUND</h2>
 				</div>
 				<div class="divBtn">
 					<button class="quit">QUIT</button>
 					<button class="next">NEXT ROUND</button>
 				</div>
 			</section>
-
 			<section class="SecLastPlayerWin">
 				<p class="pWin">PLAYER 2 WINS!</p>
 				<div class="divH2">
@@ -89,7 +108,6 @@
 					<button class="next">NEXT ROUND</button>
 				</div>
 			</section>
-
 			<section class="SecRestart">
 				<h2 class="restartH2">ROUND TIED</h2>
 				<div class="divBtn">
@@ -97,7 +115,16 @@
 					<button class="next">NEXT ROUND</button>
 				</div>
 			</section>
+			<section class="SecReload">
+				<h2 class="restartH2">RESTART GAME?</h2>
+				<div class="divBtn">
+					<button class="NO">NO, CANCEL</button>
+					<button class="next">YES, RESTART</button>
+				</div>
+			</section>
+		</article>
 		</main>
-        <script src="../js/main.js"></script>
+        <script src="../js/play.js"></script>
+        <script src="../js/index.js"></script>
 	</body>
 </html>

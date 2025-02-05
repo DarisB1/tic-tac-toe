@@ -8,7 +8,7 @@
 }
 
 body {
-	background-color: #1A2A33;
+    background-color: #1A2A33;
 }
 
 .divOpacity {
@@ -35,7 +35,7 @@ header div {
     display: flex;
 }
 
-.divCroixRond {
+.divCroixRondHeader {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -68,7 +68,109 @@ header div {
 	background-color: Silver;
 }
 
+.firstArt {
+    width: 100%;
+    padding: 0 1.5rem;
+    position: absolute;
+    top: 25%;
+    left: 0;
+    display: none;
+}
+
+.divCroixRond {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    gap: 8px;
+}
+
 .firstSec {
+    background-color: #1F3641;
+    box-shadow: 0px -8px 0px 0px rgba(16, 33, 42, 1) inset;
+    border-radius: 15px;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #A8BFC9;
+    margin-bottom: 1.5rem;
+}
+
+.firstSec div {
+    background-color: #1A2A33;
+    padding: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.choixX, .choixO {
+    background-color: #1A2A33;
+    border: none;
+    width: 100%;
+    padding: 11px 0;
+}
+
+.choix {
+    background-color: #A8BFC9;
+    border-radius: 10px;
+}
+
+.choixX img {
+    width: 32px;
+    height: 32px;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #A8BFC9;
+}
+
+.lastSec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.cpu, .player {
+    background-color: #F2B137;
+    box-shadow: 0px -8px 0px 0px rgba(204, 139, 19, 1) inset;
+    padding: 14px 5rem;
+    border: none;
+    border-radius: 15px;
+    width: 100%;
+    padding: 14px 0 22px 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #1A2A33;
+}
+
+a {
+    color: #1A2A33;
+    text-decoration: none;
+}
+
+.player {
+    background-color: #31C3BD;
+    box-shadow: 0px -8px 0px 0px rgba(17, 140, 135, 1) inset;
+}
+
+.lastArt {
+    display: flex;
+    flex-direction: column;
+}
+
+.secBlockGame {
 	display: grid;
 	grid-template-columns: repeat(3, 92px);
 	grid-template-rows: repeat(3, 92px);
@@ -91,7 +193,7 @@ header div {
     width: 40px;
 }
 
-.secondSec {
+.secCounterWin {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -99,19 +201,25 @@ header div {
     width: 100%;
     text-align: center;
     gap: 31px;
-
 }
 
 .playerDiv{
     text-align: center;
     color: black;
     width: 100%;
-    padding: 12px 0;
+    padding-bottom: 12px;
     font-size: 12px;
     font-weight: 400;
     line-height: 15px;
-    color: #1A2A33;
     border-radius: 10px;
+}
+
+.playerDiv p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: #1A2A33;
+    margin-top: 1.5rem;
 }
 
 span {
@@ -134,26 +242,38 @@ span {
 }
 
 .SecFirstPlayerWin {
+    display: none;
     position: absolute;
     top: 35%;
     left: 0;
     background-color: #1F3641;
     width: 100%;
     z-index: 2;
-    display: none;
 }
 
 .SecLastPlayerWin {
+    display: none;
     position: absolute;
     top: 35%;
     left: 0;
     background-color: #1F3641;
     width: 100%;
     z-index: 2;
-    display: none;
 }
 
 .SecRestart {
+    position: absolute;
+    top: 35%;
+    left: 0;
+    background-color: #1F3641;
+    width: 100%;
+    z-index: 2;
+    padding-top: 4rem;
+    text-align: center;
+    display: none;
+}
+
+.SecReload {
     position: absolute;
     top: 35%;
     left: 0;
@@ -188,11 +308,15 @@ span {
     line-height: 30px;
 }
 
-.croixH2 {
+.croixH2, .rondH2 {
     color: #31C3BD;
     font-size: 24px;
     font-weight: 700;
     line-height: 30px;
+}
+
+.rondH2 {
+    color: #F2B137;
 }
 
 .restartH2 {
@@ -209,12 +333,16 @@ span {
     margin: 1.5rem 0 3rem 0;
 }
 
-.quit {
+.quit, .NO {
     padding: 15px 16px 17px 16px;
     background-color: #A8BFC9;
     box-shadow: 0px -4px 0px 0px rgba(107, 137, 151, 1) inset;
     border: none;
     border-radius: 10px;
+}
+
+a, .quit, .NO {
+    text-decoration: none;
     font-size: 16px;
     font-weight: 700;
     line-height: 20px;
@@ -247,12 +375,17 @@ span {
         margin: 0;
     }
 
-    .firstSec {
+    .firstArt {
+        width: 50%;
+        left: 25%;
+    }
+
+    .secBlockGame {
         grid-template-columns: repeat(3, 140px);
         grid-template-rows: repeat(3, 140px);
     }
     
-    .secondSec {
+    .secCounterWin {
         margin: auto;
     }
 
@@ -299,8 +432,13 @@ span {
     header {
         width: 36%;
     }
+
+    .firstArt {
+        width: 30%;
+        left: 35%;
+    }
     
-    .secondSec {
+    .secCounterWin {
         margin: auto;
     }
 
