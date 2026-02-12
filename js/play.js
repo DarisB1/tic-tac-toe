@@ -95,7 +95,8 @@ for (let i = 0; i < pion.length; i++) {
             }
         }
 
-        if (!arrayPion.includes("")) {      
+        if (!arrayPion.includes("")) {
+            opacity.style.display = "flex"
             SecRestart.style.display = "flex";
             SecRestart.style.flexDirection = "column";
             scoreTies++
